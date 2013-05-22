@@ -1,0 +1,14 @@
+The following symbols are considered sustainable KPI on architecture arm.
+
+Exported by com.apple.kpi.bsd:
+
+
+Exported by com.apple.kpi.mach:
+
+
+Exported by com.apple.kpi.iokit:
+
+
+Exported by com.apple.kpi.libkern:
+
+
