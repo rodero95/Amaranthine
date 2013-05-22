@@ -31,3 +31,7 @@ build/
 _
 
 Documentation/*
+
+#kernel
+mach
+*.symbolset
