@@ -8,10 +8,11 @@
 
 #include "AppleARMPE.h"
 
+
 #define HIGH_SCORE  100000
 #define super IOPlatformExpert
 
-OSDefineMetaClassAndStructors(ARMPlatformExpert, IOPlatformExpert);
+OSDefineMetaClassAndStructors(ARMPlatformExpert, IODTPlatformExpert);
 
 bool ARMPlatformExpert::init(OSDictionary *propTable) {
     PE_LOG("Initializing ARM platform expert.\n");
@@ -30,43 +31,24 @@ bool ARMPlatformExpert::start(IOService *provider) {
         panic("IOPlatformExpert failed to start");
     }
 
-    IOPrintPlane(gIODTPlane);
-    IOLog("===");
+    PE_LOG("Dumping current service tree\n");
     IOPrintPlane(gIOServicePlane);
     
     registerService();
-
+    
     PE_LOG("Registered device with IOKit\n");
 
     return true;
 }
 
-bool ARMPlatformExpert::configure( IOService * provider )
+const char * ARMPlatformExpert::deleteList ( void )
 {
-    OSSet *		topLevel;
-    OSDictionary *	dict;
-    IOService * 	nub;
-    
-    PE_LOG("Called configure()");
-    
-    topLevel = OSDynamicCast( OSSet, getProperty("top-level"));
+    return "";
+}
 
-    if(topLevel) {
-        while( (dict = OSDynamicCast( OSDictionary,
-                                     topLevel->getAnyObject()))) {
-            dict->retain();
-            topLevel->removeObject( dict );
-            nub = createNub( dict );
-            if(0 == nub)
-                continue;
-            dict->release();
-            PE_LOG("Nub: %p has name %s", nub, nub->getName());
-            nub->attach( this );
-            nub->registerService();
-        }
-    }
-    
-    return( true );
+const char * ARMPlatformExpert::excludeList( void )
+{
+    return("'chosen', 'memory', 'options', 'aliases'");
 }
 
 IOService* ARMPlatformExpert::probe(IOService *provider, SInt32* score) {

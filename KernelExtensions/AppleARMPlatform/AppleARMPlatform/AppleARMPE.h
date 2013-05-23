@@ -11,16 +11,19 @@
 
 #include <mach/mach_types.h>
 #include <IOKit/IOPlatformExpert.h>
+#include <IOKit/IODeviceTreeSupport.h>
 #include "IOCPU.h"
 
-class ARMPlatformExpert : public IOPlatformExpert {
+class ARMPlatformExpert : public IODTPlatformExpert {
     OSDeclareDefaultStructors(ARMPlatformExpert);
 public:
     bool init(OSDictionary *propTable);
     IOService * probe(IOService *provider, SInt32 *score);
     bool start(IOService * provider);
     bool getMachineName(char *name, int maxLength);
-    bool configure(IOService * provider);
+    const char * deleteList(void);
+    const char * excludeList(void);
+
 };
 
 #define PE_LOG \
