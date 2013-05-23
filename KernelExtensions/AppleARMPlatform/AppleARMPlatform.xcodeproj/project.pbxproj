@@ -10,6 +10,10 @@
 		D82F9919174C25EE0071D4D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D82F9917174C25EE0071D4D2 /* InfoPlist.strings */; };
 		D82F9924174C2C9B0071D4D2 /* AppleARMPE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D82F9922174C2C9B0071D4D2 /* AppleARMPE.cpp */; };
 		D82F9925174C2C9B0071D4D2 /* AppleARMPE.h in Headers */ = {isa = PBXBuildFile; fileRef = D82F9923174C2C9B0071D4D2 /* AppleARMPE.h */; };
+		D84652EA174D776500FB6DBC /* AppleARMCPU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D84652E8174D776500FB6DBC /* AppleARMCPU.cpp */; };
+		D84652EB174D776500FB6DBC /* AppleARMCPU.h in Headers */ = {isa = PBXBuildFile; fileRef = D84652E9174D776500FB6DBC /* AppleARMCPU.h */; };
+		D84652EE174D8F8800FB6DBC /* AppleARMIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D84652EC174D8F8800FB6DBC /* AppleARMIO.cpp */; };
+		D84652EF174D8F8800FB6DBC /* AppleARMIO.h in Headers */ = {isa = PBXBuildFile; fileRef = D84652ED174D8F8800FB6DBC /* AppleARMIO.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		D82F991C174C25EE0071D4D2 /* AppleARMPlatform-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppleARMPlatform-Prefix.pch"; sourceTree = "<group>"; };
 		D82F9922174C2C9B0071D4D2 /* AppleARMPE.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleARMPE.cpp; sourceTree = "<group>"; };
 		D82F9923174C2C9B0071D4D2 /* AppleARMPE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleARMPE.h; sourceTree = "<group>"; };
+		D84652E8174D776500FB6DBC /* AppleARMCPU.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleARMCPU.cpp; sourceTree = "<group>"; };
+		D84652E9174D776500FB6DBC /* AppleARMCPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleARMCPU.h; sourceTree = "<group>"; };
+		D84652EC174D8F8800FB6DBC /* AppleARMIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleARMIO.cpp; sourceTree = "<group>"; };
+		D84652ED174D8F8800FB6DBC /* AppleARMIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleARMIO.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 				D82F9915174C25EE0071D4D2 /* Supporting Files */,
 				D82F9922174C2C9B0071D4D2 /* AppleARMPE.cpp */,
 				D82F9923174C2C9B0071D4D2 /* AppleARMPE.h */,
+				D84652E8174D776500FB6DBC /* AppleARMCPU.cpp */,
+				D84652E9174D776500FB6DBC /* AppleARMCPU.h */,
+				D84652EC174D8F8800FB6DBC /* AppleARMIO.cpp */,
+				D84652ED174D8F8800FB6DBC /* AppleARMIO.h */,
 			);
 			path = AppleARMPlatform;
 			sourceTree = "<group>";
@@ -94,6 +106,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82F9925174C2C9B0071D4D2 /* AppleARMPE.h in Headers */,
+				D84652EB174D776500FB6DBC /* AppleARMCPU.h in Headers */,
+				D84652EF174D8F8800FB6DBC /* AppleARMIO.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82F9924174C2C9B0071D4D2 /* AppleARMPE.cpp in Sources */,
+				D84652EA174D776500FB6DBC /* AppleARMCPU.cpp in Sources */,
+				D84652EE174D8F8800FB6DBC /* AppleARMIO.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
