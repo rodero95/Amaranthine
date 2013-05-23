@@ -2,18 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>OSBundleCompatibleVersion</key>
+	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.apple.purple.${PRODUCT_NAME:rfc1034identifier}</string>
-	<key>OSBundleRequired</key>
-	<string>Root</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.kpi.mach</key>
@@ -22,13 +14,21 @@
 		<string>9.0</string>
 		<key>com.apple.kpi.iokit</key>
 		<string>9.0</string>
-		<key>com.apple.kpi.private</key>
-		<string>9.0</string>
 		<key>com.apple.kpi.unsupported</key>
 		<string>9.0</string>
+		<key>com.apple.kpi.private</key>
+		<string>9.0</string>
 	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>OSBundleCompatibleVersion</key>
+	<string>1.0</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>IOKitPersonalities</key>
@@ -69,7 +69,7 @@
 	<string>English</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2012-2013 Apple Inc. All rights reserved.</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
 </dict>
 </plist>

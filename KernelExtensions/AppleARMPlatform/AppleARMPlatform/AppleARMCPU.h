@@ -28,6 +28,7 @@ public:
     void haltCPU(void);
     const OSSymbol* getCPUName(void);
     bool init(OSDictionary *propTable);
+    void ipiHandler(void* refCon, IOService* nub, int source);
 };
 
 /*

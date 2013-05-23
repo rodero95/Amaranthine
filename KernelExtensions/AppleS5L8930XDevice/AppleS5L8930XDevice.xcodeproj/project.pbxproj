@@ -23,6 +23,7 @@
 		D856BE8D174E51E0008A871E /* AppleS5L8930XDevice-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppleS5L8930XDevice-Prefix.pch"; sourceTree = "<group>"; };
 		D856BE93174E5222008A871E /* AppleS5L8930XIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleS5L8930XIO.cpp; sourceTree = "<group>"; };
 		D856BE94174E5222008A871E /* AppleS5L8930XIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleS5L8930XIO.h; sourceTree = "<group>"; };
+		D856BE97174ED1CB008A871E /* AppleARMIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleARMIO.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 				D856BE85174E51E0008A871E /* Supporting Files */,
 				D856BE93174E5222008A871E /* AppleS5L8930XIO.cpp */,
 				D856BE94174E5222008A871E /* AppleS5L8930XIO.h */,
+				D856BE97174ED1CB008A871E /* AppleARMIO.h */,
 			);
 			path = AppleS5L8930XDevice;
 			sourceTree = "<group>";

@@ -30,11 +30,15 @@ bool ARMIO::start( IOService * provider )
     if( !super::start( provider))
         return( false);
     
+    fNub = provider;
+    fMemory = provider->mapDeviceMemoryWithIndex( 0 );
+    if( 0 == fMemory)
+        IOLog("%s: unexpected ranges\n", getName());
+    
     PMinit();		// initialize for power management
     temporaryPowerClampOn();	// hold power on till we get children
     return( true);
 }
-
 
 IOService * ARMIO::createNub( IORegistryEntry * from )
 {

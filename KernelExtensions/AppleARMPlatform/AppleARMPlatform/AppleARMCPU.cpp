@@ -19,6 +19,12 @@ bool ARMCPU::init(OSDictionary *propTable) {
     return true;
 }
 
+void ARMCPU::ipiHandler(void* refCon, IOService* nub, int source) {
+    if(ipi_handler)
+        ipi_handler();
+    return;
+}
+
 bool ARMCPU::start(IOService* provider) {
     PE_LOG("Starting ARM cpu provider\n");
     
@@ -58,6 +64,9 @@ bool ARMCPU::start(IOService* provider) {
 
 void ARMCPU::initCPU(bool boot) {
     PE_LOG("Setting active cpu state\n");
+    if(gIC) {
+        gIC->enableCPUInterrupt(this);
+    }
     setCPUState(kIOCPUStateRunning);
 }
 
@@ -88,10 +97,6 @@ const OSSymbol* ARMCPU::getCPUName(void) {
 OSDefineMetaClassAndStructors(ARMDumbInterruptController, IOCPUInterruptController);
 
 IOReturn ARMDumbInterruptController::handleInterrupt(void *refCon, IOService* nub, int source) {
-    IOInterruptVector *intVect;
-    intVect = &vectors[0];
-    if(!intVect->interruptRegistered)
-        return kIOReturnInvalid;
-    intVect->handler(intVect->target, refCon, intVect->nub, source);
-    return kIOReturnSuccess;
+    PE_LOG("Attempting to dispatch an interrupt! (%p, %p, %d)\n", refCon, nub, source);
+    return super::handleInterrupt(refCon, nub, source);
 }

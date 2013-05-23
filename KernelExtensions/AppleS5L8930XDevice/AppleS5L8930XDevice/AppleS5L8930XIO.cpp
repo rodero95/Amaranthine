@@ -9,7 +9,7 @@
 #include "AppleS5L8930XIO.h"
 
 #define super IOService
-OSDefineMetaClassAndStructors(AppleS5L8930XIO, IOService);
+OSDefineMetaClassAndStructors(AppleS5L8930XIO, ARMIO);
 
 #define S5L_LOG \
     IOLog("[%s] ", __PRETTY_FUNCTION__), IOLog
@@ -30,11 +30,8 @@ bool AppleS5L8930XIO::start(IOService* provider) {
     if(!super::start(provider)) {
         panic("failed to start super provider");
     }
-
+    S5L_LOG("Publishing entries to IOService tree plane");
+    publishBelow(provider);
     registerService();
-
-    S5L_LOG("Dumping currently attached IOService nodes\n");
-    IOPrintPlane(gIOServicePlane);
-
     return true;
 }

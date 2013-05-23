@@ -12,8 +12,9 @@
 #include <mach/mach_types.h>
 #include <IOKit/IOService.h>
 #include <IOKit/IOLib.h>
+#include "AppleARMIO.h"
 
-class AppleS5L8930XIO : public IOService {
+class AppleS5L8930XIO : public ARMIO {
     OSDeclareDefaultStructors(AppleS5L8930XIO);
 public:
     bool init(OSDictionary *propTable);
