@@ -53,6 +53,8 @@
 			<string>IOBSD</string>
 		</dict>
 	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
 	<key>OSBundleCompatibleVersion</key>
 	<string>1.0.4</string>
 	<key>OSBundleLibraries</key>

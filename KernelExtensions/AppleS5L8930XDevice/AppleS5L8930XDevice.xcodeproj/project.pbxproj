@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D856BE89174E51E0008A871E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D856BE87174E51E0008A871E /* InfoPlist.strings */; };
+		D856BE8C174E51E0008A871E /* AppleS5L8930XDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D856BE8B174E51E0008A871E /* AppleS5L8930XDevice.cpp */; };
+		D856BE95174E5222008A871E /* AppleS5L8930XIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D856BE93174E5222008A871E /* AppleS5L8930XIO.cpp */; };
+		D856BE96174E5222008A871E /* AppleS5L8930XIO.h in Headers */ = {isa = PBXBuildFile; fileRef = D856BE94174E5222008A871E /* AppleS5L8930XIO.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D856BE7F174E51E0008A871E /* AppleS5L8930XDevice.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleS5L8930XDevice.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		D856BE83174E51E0008A871E /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
+		D856BE86174E51E0008A871E /* AppleS5L8930XDevice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppleS5L8930XDevice-Info.plist"; sourceTree = "<group>"; };
+		D856BE88174E51E0008A871E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D856BE8A174E51E0008A871E /* AppleS5L8930XDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleS5L8930XDevice.h; sourceTree = "<group>"; };
+		D856BE8B174E51E0008A871E /* AppleS5L8930XDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppleS5L8930XDevice.cpp; sourceTree = "<group>"; };
+		D856BE8D174E51E0008A871E /* AppleS5L8930XDevice-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppleS5L8930XDevice-Prefix.pch"; sourceTree = "<group>"; };
+		D856BE93174E5222008A871E /* AppleS5L8930XIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleS5L8930XIO.cpp; sourceTree = "<group>"; };
+		D856BE94174E5222008A871E /* AppleS5L8930XIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleS5L8930XIO.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D856BE7A174E51E0008A871E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D856BE74174E51E0008A871E = {
+			isa = PBXGroup;
+			children = (
+				D856BE84174E51E0008A871E /* AppleS5L8930XDevice */,
+				D856BE81174E51E0008A871E /* Frameworks */,
+				D856BE80174E51E0008A871E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D856BE80174E51E0008A871E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D856BE7F174E51E0008A871E /* AppleS5L8930XDevice.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D856BE81174E51E0008A871E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D856BE82174E51E0008A871E /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D856BE82174E51E0008A871E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D856BE83174E51E0008A871E /* Kernel.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D856BE84174E51E0008A871E /* AppleS5L8930XDevice */ = {
+			isa = PBXGroup;
+			children = (
+				D856BE8A174E51E0008A871E /* AppleS5L8930XDevice.h */,
+				D856BE8B174E51E0008A871E /* AppleS5L8930XDevice.cpp */,
+				D856BE85174E51E0008A871E /* Supporting Files */,
+				D856BE93174E5222008A871E /* AppleS5L8930XIO.cpp */,
+				D856BE94174E5222008A871E /* AppleS5L8930XIO.h */,
+			);
+			path = AppleS5L8930XDevice;
+			sourceTree = "<group>";
+		};
+		D856BE85174E51E0008A871E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D856BE86174E51E0008A871E /* AppleS5L8930XDevice-Info.plist */,
+				D856BE87174E51E0008A871E /* InfoPlist.strings */,
+				D856BE8D174E51E0008A871E /* AppleS5L8930XDevice-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D856BE7B174E51E0008A871E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D856BE96174E5222008A871E /* AppleS5L8930XIO.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D856BE7E174E51E0008A871E /* AppleS5L8930XDevice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D856BE90174E51E0008A871E /* Build configuration list for PBXNativeTarget "AppleS5L8930XDevice" */;
+			buildPhases = (
+				D856BE79174E51E0008A871E /* Sources */,
+				D856BE7A174E51E0008A871E /* Frameworks */,
+				D856BE7B174E51E0008A871E /* Headers */,
+				D856BE7C174E51E0008A871E /* Resources */,
+				D856BE7D174E51E0008A871E /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppleS5L8930XDevice;
+			productName = AppleS5L8930XDevice;
+			productReference = D856BE7F174E51E0008A871E /* AppleS5L8930XDevice.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D856BE75174E51E0008A871E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = rms;
+			};
+			buildConfigurationList = D856BE78174E51E0008A871E /* Build configuration list for PBXProject "AppleS5L8930XDevice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D856BE74174E51E0008A871E;
+			productRefGroup = D856BE80174E51E0008A871E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D856BE7E174E51E0008A871E /* AppleS5L8930XDevice */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D856BE7C174E51E0008A871E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D856BE89174E51E0008A871E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		D856BE7D174E51E0008A871E /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D856BE79174E51E0008A871E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D856BE8C174E51E0008A871E /* AppleS5L8930XDevice.cpp in Sources */,
+				D856BE95174E5222008A871E /* AppleS5L8930XIO.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D856BE87174E51E0008A871E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D856BE88174E51E0008A871E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D856BE8E174E51E0008A871E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.8;
+			};
+			name = Debug;
+		};
+		D856BE8F174E51E0008A871E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx10.8;
+			};
+			name = Release;
+		};
+		D856BE91174E51E0008A871E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppleS5L8930XDevice/AppleS5L8930XDevice-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "AppleS5L8930XDevice/AppleS5L8930XDevice-Info.plist";
+				MODULE_NAME = com.apple.purple.AppleS5L8930XDevice;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		D856BE92174E51E0008A871E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppleS5L8930XDevice/AppleS5L8930XDevice-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "AppleS5L8930XDevice/AppleS5L8930XDevice-Info.plist";
+				MODULE_NAME = com.apple.purple.AppleS5L8930XDevice;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D856BE78174E51E0008A871E /* Build configuration list for PBXProject "AppleS5L8930XDevice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D856BE8E174E51E0008A871E /* Debug */,
+				D856BE8F174E51E0008A871E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D856BE90174E51E0008A871E /* Build configuration list for PBXNativeTarget "AppleS5L8930XDevice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D856BE91174E51E0008A871E /* Debug */,
+				D856BE92174E51E0008A871E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D856BE75174E51E0008A871E /* Project object */;
+}

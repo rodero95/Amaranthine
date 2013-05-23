@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>OSBundleCompatibleVersion</key>
-	<string>1.0</string>
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleIdentifier</key>
@@ -22,45 +20,29 @@
 		<string>9.0</string>
 		<key>com.apple.kpi.iokit</key>
 		<string>9.0</string>
+		<key>com.apple.purple.AppleARMPlatform</key>
+		<string>1.0</string>
 		<key>com.apple.kpi.private</key>
 		<string>9.0</string>
 		<key>com.apple.kpi.unsupported</key>
 		<string>9.0</string>
 	</dict>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>AppleS5L8930XIO</key>
+		<dict>
+			<key>IOClass</key>
+			<string>AppleS5L8930XIO</string>
+			<key>IONameMatch</key>
+			<string>arm-io,s5l8930x</string>
+			<key>IOProviderClass</key>
+			<string>IOPlatformDevice</string>
+		</dict>
+	</dict>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
-	<key>IOKitPersonalities</key>
-	<dict>
-		<key></key>
-		<dict>
-			<key>IOProbeScore</key>
-			<integer>1000</integer>
-			<key>IOProviderClass</key>
-			<string>IOPlatformExpertDevice</string>
-			<key>IOClass</key>
-			<string>ARMPlatformExpert</string>
-			<key>SystemPowerProfileOverrideDict</key>
-			<dict>
-				<key>System Sleep Timer</key>
-				<integer>2147483647</integer>
-			</dict>
-			<key>IONameMatch</key>
-			<string>AppleARM</string>
-		</dict>
-		<key>AppleARMCPU</key>
-		<dict>
-			<key>IOProbeScore</key>
-			<integer>100</integer>
-			<key>IOProviderClass</key>
-			<string>IOPlatformDevice</string>
-			<key>IOClass</key>
-			<string>ARMCPU</string>
-			<key>IONameMatch</key>
-			<string>cpu</string>
-		</dict>
-	</dict>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleSignature</key>
