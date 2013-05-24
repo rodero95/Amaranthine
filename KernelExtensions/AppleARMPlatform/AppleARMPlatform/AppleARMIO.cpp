@@ -147,9 +147,7 @@ IOService * ARMIODevice::matchLocation( IOService * /* client */ )
 IOReturn ARMIODevice::getResources( void )
 {
     IOService *macIO = this;
-    
-    IOLog("[%s] Getting resources\n", __PRETTY_FUNCTION__);
-    
+
     if (getDeviceMemory() != 0) return kIOReturnSuccess;
     
     while (macIO && ((macIO = macIO->getProvider()) != 0))

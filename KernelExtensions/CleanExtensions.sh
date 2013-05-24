@@ -1,6 +1,6 @@
 #!/bin/sh
 
-KEXTS="AppleARMPlatform IOSerialFamily AppleS5L8930XDevice"
+KEXTS="AppleARMPlatform IOSerialFamily AppleS5L8930XDevice AppleSamsungSerial"
 CURDIR=$(pwd)
 
 for i in $KEXTS; 

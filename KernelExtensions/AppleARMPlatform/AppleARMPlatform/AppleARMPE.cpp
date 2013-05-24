@@ -36,6 +36,8 @@ bool ARMPlatformExpert::start(IOService *provider) {
     
     registerService();
     
+    getProvider()->publishResource("IORTC");
+    
     PE_LOG("Registered device with IOKit\n");
 
     return true;
