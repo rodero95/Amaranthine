@@ -38,9 +38,7 @@ bool AppleSamsungSerialBSDClient::start(IOService *provider)
 	void* node;
     
     int major = cdevsw_add(-24, &bsdClientCdevsw);
-	node = devfs_make_node(makedev(major, 0), 0, 0, 0, 0666, "tty.samsung-%d", major);
-    
-    IOLog("[%s] Starting BSD client for provider %p (maj,min: %d,%d)\n", __PRETTY_FUNCTION__, provider, major, 0);
+	node = devfs_make_node(makedev(major, 0), 0, 0, 0, 0666, "tty.samsung-%s", provider->getProvider()->getName());
     
 	if (!node) {
 		return false;
