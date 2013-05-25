@@ -776,7 +776,7 @@
 				606B78A10D4A556B00A2EB99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		60CD8A3308A7E7F300DC31BD /* Build configuration list for PBXNativeTarget "IOStorageFamily" */ = {
 			isa = XCConfigurationList;
@@ -785,7 +785,7 @@
 				60CD8A3508A7E7F300DC31BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		60CD8A3708A7E7F300DC31BD /* Build configuration list for PBXProject "IOStorageFamily" */ = {
 			isa = XCConfigurationList;
@@ -794,7 +794,7 @@
 				60CD8A3908A7E7F300DC31BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		60FD68830D402CE3000D088D /* Build configuration list for PBXAggregateTarget "IOStorageFamily Headers" */ = {
 			isa = XCConfigurationList;
@@ -803,7 +803,7 @@
 				60FD685E0D402C4F000D088D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		C1E55B210D32D158002875AA /* Build configuration list for PBXNativeTarget "IOStorageFamily_Embedded" */ = {
 			isa = XCConfigurationList;
@@ -812,7 +812,7 @@
 				C1E55B230D32D158002875AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

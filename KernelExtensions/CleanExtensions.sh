@@ -1,6 +1,6 @@
 #!/bin/sh
 
-KEXTS="AppleARMPlatform IOSerialFamily AppleS5L8930XDevice AppleSamsungSerial AppleFusedKernelRamdisk"
+KEXTS="AppleARMPlatform IOSerialFamily AppleS5L8930XDevice AppleSamsungSerial AppleFusedKernelRamdisk msdosfs"
 CURDIR=$(pwd)
 
 for i in $KEXTS; 
