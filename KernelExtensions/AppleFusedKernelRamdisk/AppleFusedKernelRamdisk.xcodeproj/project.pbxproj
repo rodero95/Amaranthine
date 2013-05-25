@@ -10,6 +10,8 @@
 		D84F2B5F174F9E6F00CEAFE5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D84F2B5D174F9E6F00CEAFE5 /* InfoPlist.strings */; };
 		D84F2B6B174F9EFA00CEAFE5 /* AppleFusedStorageDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D84F2B69174F9EFA00CEAFE5 /* AppleFusedStorageDevice.cpp */; };
 		D84F2B6C174F9EFA00CEAFE5 /* AppleFusedStorageDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = D84F2B6A174F9EFA00CEAFE5 /* AppleFusedStorageDevice.h */; };
+		D854F73417513020006AD09C /* AppleFusedKernelRamdiskBlockDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D854F73217513020006AD09C /* AppleFusedKernelRamdiskBlockDevice.cpp */; };
+		D854F73517513020006AD09C /* AppleFusedKernelRamdiskBlockDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = D854F73317513020006AD09C /* AppleFusedKernelRamdiskBlockDevice.h */; };
 		D880CA37175048E200B7B093 /* AppleFusedStorageBSDClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D880CA35175048E200B7B093 /* AppleFusedStorageBSDClient.cpp */; };
 		D880CA38175048E200B7B093 /* AppleFusedStorageBSDClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D880CA36175048E200B7B093 /* AppleFusedStorageBSDClient.h */; };
 /* End PBXBuildFile section */
@@ -22,6 +24,8 @@
 		D84F2B63174F9E6F00CEAFE5 /* AppleFusedKernelRamdisk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppleFusedKernelRamdisk-Prefix.pch"; sourceTree = "<group>"; };
 		D84F2B69174F9EFA00CEAFE5 /* AppleFusedStorageDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleFusedStorageDevice.cpp; sourceTree = "<group>"; };
 		D84F2B6A174F9EFA00CEAFE5 /* AppleFusedStorageDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleFusedStorageDevice.h; sourceTree = "<group>"; };
+		D854F73217513020006AD09C /* AppleFusedKernelRamdiskBlockDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleFusedKernelRamdiskBlockDevice.cpp; sourceTree = "<group>"; };
+		D854F73317513020006AD09C /* AppleFusedKernelRamdiskBlockDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleFusedKernelRamdiskBlockDevice.h; sourceTree = "<group>"; };
 		D880CA35175048E200B7B093 /* AppleFusedStorageBSDClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppleFusedStorageBSDClient.cpp; path = AppleFusedKernelRamdisk/AppleFusedStorageBSDClient.cpp; sourceTree = "<group>"; };
 		D880CA36175048E200B7B093 /* AppleFusedStorageBSDClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppleFusedStorageBSDClient.h; path = AppleFusedKernelRamdisk/AppleFusedStorageBSDClient.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +79,8 @@
 		D84F2B5A174F9E6F00CEAFE5 /* AppleFusedKernelRamdisk */ = {
 			isa = PBXGroup;
 			children = (
+				D854F73217513020006AD09C /* AppleFusedKernelRamdiskBlockDevice.cpp */,
+				D854F73317513020006AD09C /* AppleFusedKernelRamdiskBlockDevice.h */,
 				D84F2B5B174F9E6F00CEAFE5 /* Supporting Files */,
 				D84F2B69174F9EFA00CEAFE5 /* AppleFusedStorageDevice.cpp */,
 				D84F2B6A174F9EFA00CEAFE5 /* AppleFusedStorageDevice.h */,
@@ -101,6 +107,7 @@
 			files = (
 				D84F2B6C174F9EFA00CEAFE5 /* AppleFusedStorageDevice.h in Headers */,
 				D880CA38175048E200B7B093 /* AppleFusedStorageBSDClient.h in Headers */,
+				D854F73517513020006AD09C /* AppleFusedKernelRamdiskBlockDevice.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +187,7 @@
 			files = (
 				D84F2B6B174F9EFA00CEAFE5 /* AppleFusedStorageDevice.cpp in Sources */,
 				D880CA37175048E200B7B093 /* AppleFusedStorageBSDClient.cpp in Sources */,
+				D854F73417513020006AD09C /* AppleFusedKernelRamdiskBlockDevice.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

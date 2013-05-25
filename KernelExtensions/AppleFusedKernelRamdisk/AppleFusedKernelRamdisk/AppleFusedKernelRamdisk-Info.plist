@@ -24,23 +24,14 @@
 	<string>1</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>AppleFusedRamdiskBSDClient</key>
-		<dict>
-			<key>IOProviderClass</key>
-			<string>AppleFusedStorageDevice</string>
-			<key>IOClass</key>
-			<string>AppleFusedStorageBSDClient</string>
-			<key>IOResourceMatch</key>
-			<string>IOBSD</string>
-		</dict>
 		<key>AppleFusedKernelRamdisk</key>
 		<dict>
 			<key>IOProviderClass</key>
-			<string>ARMIODevice</string>
+			<string>IOResources</string>
 			<key>IOClass</key>
-			<string>AppleFusedStorageDevice</string>
-			<key>IONameMatch</key>
-			<string>ceata,s5l8930x</string>
+			<string>AppleFusedKernelRamdisk</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
@@ -49,6 +40,8 @@
 	<dict>
 		<key>com.apple.kpi.mach</key>
 		<string>9.0</string>
+		<key>com.apple.iokit.IOStorageFamily</key>
+		<string>1.6</string>
 		<key>com.apple.kpi.bsd</key>
 		<string>9.0</string>
 		<key>com.apple.kpi.libkern</key>

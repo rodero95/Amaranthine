@@ -194,7 +194,7 @@
 	<key>OSBundleCompatibleVersion</key>
 	<string>1.0.0b1</string>
 	<key>OSBundleRequired</key>
-	<string>Local-Root</string>
+	<string>Root</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.kpi.mach</key>

@@ -610,12 +610,27 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_KERNEL_DEVELOPMENT = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				LD_NO_PIE = NO;
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MODULE_NAME = com.apple.iokit.IOStorageFamily;
+				OTHER_LDFLAGS = (
+					"-mlong-calls",
+					"-mcpu=arm1176jzf-s",
+					"-march=armv6",
+					"-mlong-branch",
+				);
 				PRODUCT_NAME = IOStorageFamily;
 				SDKROOT = macosx10.8;
-				WARNING_CFLAGS = "-Wall";
+				SUPPORTED_PLATFORMS = macosx;
+				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Debug;
@@ -624,11 +639,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_KERNEL_DEVELOPMENT = NO;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				LD_NO_PIE = NO;
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MODULE_NAME = com.apple.iokit.IOStorageFamily;
+				OTHER_LDFLAGS = (
+					"-mlong-calls",
+					"-mcpu=arm1176jzf-s",
+					"-march=armv6",
+					"-mlong-branch",
+				);
 				PRODUCT_NAME = IOStorageFamily;
 				SDKROOT = macosx10.8;
-				WARNING_CFLAGS = "-Wall";
+				SUPPORTED_PLATFORMS = macosx;
+				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Release;
@@ -637,7 +668,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = YES;
+				GCC_USE_REGISTER_FUNCTION_CALLS = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GENERATE_MASTER_OBJECT_FILE = YES;
+				LD_NO_PIE = NO;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_execute;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = (
+					"-mlong-calls",
+					"-march=armv6",
+					"-mcpu=arm1176jzf-s",
+				);
+				OTHER_LDFLAGS = (
+					"-mlong-calls",
+					"-mcpu=arm1176jzf-s",
+					"-march=armv6",
+				);
 				SDKROOT = macosx10.8;
 			};
 			name = Debug;
@@ -646,7 +695,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = YES;
+				GCC_USE_REGISTER_FUNCTION_CALLS = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GENERATE_MASTER_OBJECT_FILE = YES;
+				LD_NO_PIE = NO;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_execute;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = (
+					"-mlong-calls",
+					"-march=armv6",
+					"-mcpu=arm1176jzf-s",
+				);
+				OTHER_LDFLAGS = (
+					"-mlong-calls",
+					"-mcpu=arm1176jzf-s",
+					"-march=armv6",
+				);
 				SDKROOT = macosx10.8;
 			};
 			name = Release;
