@@ -102,15 +102,15 @@ static void __frd_strategy(struct buf *bp) {
      *	we just return with resid == count.
      */
     
-	if (blkoff >= (fusedDataLength << 12)) {			/* Are they trying to read/write at/after end? */
-		if(blkoff != (fusedDataLength << 12)) {		/* Are we trying to read after EOF? */
+	if (blkoff >= (fusedDataLength)) {			/* Are they trying to read/write at/after end? */
+		if(blkoff != (fusedDataLength)) {		/* Are we trying to read after EOF? */
             buf_seterror(bp, EINVAL);						/* Yeah, this is an error */
 		}
 		buf_biodone(bp);								/* Return */
 		return;
 	}
     
-	if ((blkoff + buf_count(bp)) > (fusedDataLength << 12)) {		/* Will this read go past end? */
+	if ((blkoff + buf_count(bp)) > (fusedDataLength)) {		/* Will this read go past end? */
 		buf_setcount(bp, ((fusedDataLength << 12) - blkoff));	/* Yes, trim to max */
 	}
 	/*
@@ -120,7 +120,7 @@ static void __frd_strategy(struct buf *bp) {
 	if (buf_map(bp, (caddr_t *)&vaddr))
         panic("ramstrategy: buf_map failed\n");
     
-	fvaddr = (fusedDataLength << 12) + blkoff;		/* Point to offset into ram disk */
+	fvaddr = (addr64_t)(fusedData) + blkoff;		/* Point to offset into ram disk */
     
 	if (buf_flags(bp) & B_READ) {					/* Is this a read? */
         bcopy((void *)((uintptr_t)fvaddr),
@@ -199,11 +199,11 @@ static int __frd_ioctl(dev_t dev, u_long cmd, caddr_t data, __unused int flag,
 			break;
 			
 		case DKIOCGETBLOCKCOUNT32:
-			*f = ((fusedDataLength << 12) + DEV_BSIZE - 1) / DEV_BSIZE;
+			*f = ((fusedDataLength) + DEV_BSIZE - 1) / DEV_BSIZE;
 			break;
 			
 		case DKIOCGETBLOCKCOUNT:
-			*o = ((fusedDataLength << 12) + DEV_BSIZE - 1) / DEV_BSIZE;
+			*o = ((fusedDataLength) + DEV_BSIZE - 1) / DEV_BSIZE;
 			break;
 			
 		default:
@@ -230,7 +230,7 @@ bool AppleFusedStorageBSDClient::start(IOService* provider) {
     
     // There should really be a check to make sure more than one does not exist.
     int major = bdevsw_add(14, &bsdClientBdevsw);
-	node = devfs_make_node(makedev(14, 1), DEVFS_BLOCK, 0, 0, 0644, "frd0");
+    node = devfs_make_node(makedev(14, 1), DEVFS_BLOCK, 0, 0, 0644, "frd0");
     _bdevNode = node;
     IOLog("frd0 node at %p, major: %d\n", node, major);
     
