@@ -251,6 +251,7 @@ bool AppleFusedStorageBSDClient::start(IOService* provider) {
     provider->setProperty(kIOBSDMinorKey, 1,  32);           // ("BSD Minor")
 
     registerService();
+
     // @TODO
     return true;
 }
