@@ -26,9 +26,11 @@ bool AppleFusedStorageDevice::start(IOService* provider) {
     STOR_LOG("Starting fused kernel storage ramdisk service\n");
     
     _memoryDesc = IOBufferMemoryDescriptor::withCapacity(kDiskByteSize, kIODirectionOutIn);
-	if (_memoryDesc == NULL)
-		return false;
-	_buffer = _memoryDesc->getBytesNoCopy();
+	if (_memoryDesc == NULL) {
+        panic("are you serious, we couldn't allocate a memory descriptor with length %d", kDiskByteSize);
+    }
+
+    _buffer = _memoryDesc->getBytesNoCopy();
 	
     {
         AppleFusedKernelRamdiskBlockDevice* nub = NULL;

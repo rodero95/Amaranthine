@@ -28,6 +28,15 @@
 #define super IOService
 OSDefineMetaClassAndAbstractStructors(IOStorage, IOService)
 
+long __stack_chk_guard[8];
+
+extern "C" void
+__stack_chk_fail(void)
+{
+    panic("Kernel stack memory corruption detected");
+}
+
+
 #ifndef __LP64__
 #define kIOStorageAttributesUnsupported ( ( IOStorage::ExpansionData * ) 1 )
 
